@@ -1,14 +1,18 @@
 import { notFound } from 'next/navigation';
-import { publications } from '../../../lib/data';
+import { getAllPublications } from '../../../lib/content';
 import { SectionHeading } from '../../../components/SectionHeading';
 import Link from 'next/link';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const publications = getAllPublications();
   return publications.map((publication) => ({ slug: publication.slug }));
 }
 
-export default function PublicationPage({ params }: { params: any }) {
-  const publication = publications.find((item) => item.slug === params.slug);
+export default async function PublicationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const publications = getAllPublications();
+  const publication = publications.find((item) => item.slug === resolvedParams.slug);
+  
   if (!publication) {
     notFound();
   }
@@ -24,7 +28,8 @@ export default function PublicationPage({ params }: { params: any }) {
           <strong>Authors</strong> {publication.authors.join(', ')}
         </p>
         <p className="meta-line">
-          <strong>Date</strong> {publication.date}</p>
+          <strong>Date</strong> {publication.date}
+        </p>
         <div className="tag-list">
           {publication.tags.map((tag) => (
             <span key={tag} className="tag">{tag}</span>
@@ -37,11 +42,25 @@ export default function PublicationPage({ params }: { params: any }) {
             </Link>
           ) : null}
           {publication.doi ? (
-            <Link className="meta-link" href={`https://doi.org/${publication.doi}`} target="_blank" rel="noreferrer">
+            <Link className="meta-link" href={`https://doi.org/${publication.doi.replace('https://doi.org/', '')}`} target="_blank" rel="noreferrer">
               DOI link
             </Link>
           ) : null}
         </div>
+
+        {publication.abstract && (
+          <div className="publication-abstract" style={{ marginTop: '2rem' }}>
+            <h3>Abstract</h3>
+            <p>{publication.abstract}</p>
+          </div>
+        )}
+
+        {publication.body && (
+          <div className="publication-body" style={{ marginTop: '2rem' }}>
+            {/* simple rendering of body text for now */}
+            <div dangerouslySetInnerHTML={{ __html: publication.body.replace(/\n/g, '<br />') }} />
+          </div>
+        )}
       </div>
       <div className="page-actions">
         <Link className="button button-secondary" href="/publications">

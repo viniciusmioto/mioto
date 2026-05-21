@@ -51,4 +51,5 @@ work:
     date_end: "2023-11"
 ---
 
-MSc Computer Science student at Concordia University Montreal. I work at the intersection of AI, data science, software engineering, and network science to build research-driven systems and analyses.
+
+I am a Master’s student in Computer Science at Concordia University, where I work as a research assistant for the Ptidej Team in projects related to Software Engineering, Software Quality, and Smart Cities, under the supervision of Prof. Yann-Gaël Guéhéneuc. I am supported by the Volt-Age Scholarship.

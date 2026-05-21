@@ -1,25 +1,32 @@
 import Link from 'next/link';
-import { publications, projects } from '../lib/data';
-import { getHeroData } from '../lib/content';
+import { projects } from '../lib/data';
+import { getHeroData, getAllPublications } from '../lib/content';
 import { Hero } from '../components/Hero';
 import { SectionHeading } from '../components/SectionHeading';
 import { Card } from '../components/Card';
-
-const featuredPublications = publications.filter((publication) => publication.featured).slice(0, 3);
+import { PublicationListItem } from '../components/PublicationListItem';
 
 export default function HomePage() {
   const author = getHeroData();
+  const allPublications = getAllPublications();
+  const topPublications = allPublications.slice(0, 5);
+
   return (
     <>
       <Hero author={author} />
       <div className="page-shell">
 
       <section>
-        <SectionHeading title="Featured publications" description="Recent work and selected research outputs." />
-        <div className="grid-card-list">
-          {featuredPublications.map((publication) => (
-            <Card key={publication.slug} title={publication.title} description={publication.summary} href={`/publications/${publication.slug}`} tags={publication.tags} />
+        <SectionHeading title="Recent publications" />
+        <div className="single-column-list">
+          {topPublications.map((publication) => (
+            <PublicationListItem key={publication.slug} publication={publication} />
           ))}
+        </div>
+        <div className="section-actions" style={{ marginTop: '1.5rem' }}>
+          <Link className="button button-secondary" href="/publications">
+            View all publications
+          </Link>
         </div>
       </section>
 
