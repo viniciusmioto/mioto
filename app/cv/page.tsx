@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { author } from '../../lib/data';
+import { getHeroData } from '../../lib/content';
 import { SectionHeading } from '../../components/SectionHeading';
 
 export default function CVPage() {
+  const author = getHeroData();
   return (
     <div className="page-shell">
       <SectionHeading title="Curriculum Vitae" description="Education, work experience, and professional background." />

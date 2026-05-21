@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { publications, projects } from '../lib/data';
+import { getHeroData } from '../lib/content';
 import { Hero } from '../components/Hero';
 import { SectionHeading } from '../components/SectionHeading';
 import { Card } from '../components/Card';
@@ -7,9 +8,10 @@ import { Card } from '../components/Card';
 const featuredPublications = publications.filter((publication) => publication.featured).slice(0, 3);
 
 export default function HomePage() {
+  const author = getHeroData();
   return (
     <>
-      <Hero />
+      <Hero author={author} />
       <div className="page-shell">
 
       <section>
