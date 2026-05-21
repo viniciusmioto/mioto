@@ -1,5 +1,5 @@
 ---
-title: "Vinicius Mioto"
+name: "Vinicius Mioto"
 role: "MSc Computer Science"
 avatar: "/avatar.jpg"
 email: "vsmioto@gmail.com"
@@ -51,5 +51,4 @@ work:
     date_end: "2023-11"
 ---
 
-
-I am a Master’s student in Computer Science at Concordia University, where I work as a research assistant for the Ptidej Team in projects related to Software Engineering, Software Quality, and Smart Cities, under the supervision of Prof. Yann-Gaël Guéhéneuc. I am supported by the Volt-Age Scholarship.
+Vinicius Mioto is a Master's student in Computer Science at [Concordia University](https://www.concordia.ca/), where he works as a research assistant in the [Ptidej Team](https://www.ptidej.net/) on projects related to Software Engineering, Software Quality, and Smart Cities under the supervision of [Prof. Yann-Gaël Guéhéneuc](https://www.concordia.ca/faculty/yanngael-gueheneuc.html). He is supported by the [Volt-Age](https://www.concordia.ca/research/volt-age.html) Scholarship for the Community Energy Solutions project.

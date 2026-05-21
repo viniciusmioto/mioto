@@ -10,7 +10,7 @@ export default function CVPage() {
 
       <section className="panel-block">
         <h2>About</h2>
-        <p>{author.description}</p>
+        <div dangerouslySetInnerHTML={{ __html: author.description }} />
       </section>
 
       <section className="panel-block">

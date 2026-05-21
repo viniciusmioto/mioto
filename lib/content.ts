@@ -1,7 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
 import { AuthorProfile, Publication } from './data';
+
+/**
+ * Convert a markdown string to an HTML string.
+ */
+function renderMarkdown(markdown: string): string {
+  const result = remark().use(html, { sanitize: false }).processSync(markdown);
+  return String(result);
+}
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
@@ -15,10 +25,10 @@ export function getHeroData(): AuthorProfile {
   const { data, content } = matter(fileContents);
 
   return {
-    name: data.title,
+    name: data.name,
     role: data.role,
     avatar: data.avatar,
-    description: content.trim(),
+    description: renderMarkdown(content.trim()),
     email: data.email,
     github: data.github,
     linkedin: data.linkedin,
@@ -76,7 +86,7 @@ export function getAllPublications(): Publication[] {
       venue: data.publication ?? data.publication_short ?? '',
       summary: data.summary ?? '',
       abstract: data.abstract ?? '',
-      body: content.trim(),
+      body: renderMarkdown(content.trim()),
       tags: data.tags ?? [],
       featured: data.featured ?? false,
       doi: data.doi,

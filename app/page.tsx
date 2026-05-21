@@ -38,20 +38,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
-      <section>
-        <SectionHeading title="More" description="Explore the portfolio and academic record." />
-        <div className="split-grid">
-          <Link className="panel-link" href="/cv">
-            <h3>CV</h3>
-            <p>Education, work experience, and profile details.</p>
-          </Link>
-          <Link className="panel-link" href="/talks">
-            <h3>Talks</h3>
-            <p>Conference presentations and invited talks.</p>
-          </Link>
-        </div>
-      </section>
     </div>
       </>
   );
