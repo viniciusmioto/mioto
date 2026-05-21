@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { author, publications, projects } from '../lib/data';
+import { publications, projects } from '../lib/data';
+import { Hero } from '../components/Hero';
 import { SectionHeading } from '../components/SectionHeading';
 import { Card } from '../components/Card';
 
@@ -7,21 +8,9 @@ const featuredPublications = publications.filter((publication) => publication.fe
 
 export default function HomePage() {
   return (
-    <div className="page-shell">
-      <section className="hero-card">
-        <div className="hero-copy">
-          <p className="eyebrow">Hi, I'm</p>
-          <h1>{author.name}</h1>
-          <p className="hero-description">{author.role} at {author.organizations[0].name}, building research and tools for AI, data science, software engineering, and network science.</p>
-          <div className="hero-actions">
-            <Link className="button" href="/cv">View CV</Link>
-            <Link className="button button-secondary" href="/publications">Publications</Link>
-          </div>
-        </div>
-        <div className="hero-image">
-          <img src="/avatar.jpg" alt="Profile photo of Vinicius Mioto" />
-        </div>
-      </section>
+    <>
+      <Hero />
+      <div className="page-shell">
 
       <section>
         <SectionHeading title="Featured publications" description="Recent work and selected research outputs." />
@@ -55,5 +44,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+      </>
   );
 }

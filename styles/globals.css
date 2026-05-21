@@ -35,6 +35,19 @@ a {
   text-decoration: none;
 }
 
+a:hover,
+a:focus-visible {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+a:hover .social-icon,
+a:focus-visible .social-icon,
+.social-icon:hover,
+.social-icon:focus-visible {
+  color: #60a5fa;
+}
+
 .site-header,
 .site-footer {
   background: #ffffff;
@@ -74,16 +87,35 @@ a {
   padding: 2rem 0 4rem;
 }
 
-.hero-card {
+.hero {
+  margin-top: 0;
   display: grid;
   gap: 2rem;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-  grid-template-columns: 1.4fr 1fr;
+  background: url('/stacked-peaks.svg') no-repeat center/cover;
+  padding: 3rem 2rem 10rem;
+  border-radius: 0;
+  grid-template-columns: 1fr 1.4fr;
   align-items: center;
-  margin-bottom: 2rem;
+  margin: 0 calc(-50vw + 50%);
+  margin-bottom: 0cm;
+  width: 100vw;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-copy {
@@ -92,29 +124,31 @@ a {
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: #2563eb;
+  color: #60a5fa;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.78rem;
 }
 
-.hero-card h1 {
+.hero h1 {
   margin: 0;
   font-size: clamp(2.5rem, 4vw, 4rem);
   line-height: 1;
+  color: #ffffff;
 }
 
 .hero-description {
   margin: 1.5rem 0;
   max-width: 42rem;
-  color: #334155;
+  color: #e2e8f0;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
 }
 
 .button,
@@ -149,6 +183,8 @@ a {
 .meta-link:hover,
 .panel-link:hover {
   transform: translateY(-1px);
+  color: #60a5fa;
+  text-decoration: underline;
 }
 
 .hero-image {
@@ -160,6 +196,30 @@ a {
   width: min(320px, 100%);
   border-radius: 1.25rem;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transition: all 0.15s ease;
+  color: #ffffff;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
 }
 
 .section-heading {
@@ -312,7 +372,7 @@ a {
 }
 
 @media (max-width: 900px) {
-  .hero-card {
+  .hero {
     grid-template-columns: 1fr;
   }
 }
@@ -323,7 +383,7 @@ a {
     width: calc(100% - 1.5rem);
   }
 
-  .hero-card {
+  .hero {
     padding: 1.5rem;
   }
 
