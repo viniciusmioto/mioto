@@ -606,3 +606,69 @@ h6 {
     display: inline-flex;
   }
 }
+
+/* Project Card Redesign styling */
+.project-card {
+  padding: 1.5rem;
+}
+
+.project-card-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.project-card-left {
+  flex: 1;
+}
+
+.project-card-right {
+  flex-shrink: 0;
+  width: 400px;
+}
+
+.project-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.15s ease;
+  display: block;
+}
+
+.project-card-image:hover {
+  transform: scale(1.05);
+}
+
+.project-title-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.project-title-link:hover {
+  color: var(--accent-blue-hover);
+  text-decoration: underline;
+}
+
+.project-card-description {
+  margin: 0.5rem 0 0.75rem 0;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 700px) {
+  .project-card-content {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  
+  .project-card-right {
+    width: 100%;
+    max-width: 70vh;
+    align-self: flex-start;
+  }
+}
+
