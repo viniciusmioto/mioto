@@ -14,7 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.3.1",
     "gray-matter": "^4.0.3",
-    "next": "15.2.0",
+    "next": "^16.2.9",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "remark": "^15.0.1",
@@ -24,8 +24,8 @@
     "@types/node": "20.14.2",
     "@types/react": "18.3.4",
     "@types/react-dom": "18.3.0",
-    "eslint": "8.57.0",
-    "eslint-config-next": "15.2.0",
+    "eslint": "^10.5.0",
+    "eslint-config-next": "^16.2.9",
     "typescript": "5.5.4"
   }
 }
