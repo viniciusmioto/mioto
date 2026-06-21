@@ -73,8 +73,25 @@ export function getAllPublications(): Publication[] {
     let pdfUrl = undefined;
     if (data.links && Array.isArray(data.links)) {
       const pdfLink = data.links.find((link: any) => link.type === 'pdf');
-      if (pdfLink) {
-        pdfUrl = pdfLink.url;
+      if (pdfLink && pdfLink.url) {
+        let url = pdfLink.url;
+        
+        // Best practice: if the PDF is co-located with the markdown file, copy it to the public directory
+        if (!url.startsWith('http')) {
+          // Extract just the filename in case the user provided a full path
+          const fileName = path.basename(url);
+          const srcPdf = path.join(publicationsDirectory, slug, fileName);
+          
+          if (fs.existsSync(srcPdf)) {
+            const destDir = path.join(process.cwd(), 'public', 'publications', slug);
+            fs.mkdirSync(destDir, { recursive: true });
+            const destPdf = path.join(destDir, fileName);
+            fs.copyFileSync(srcPdf, destPdf);
+            url = `/publications/${slug}/${fileName}`;
+          }
+        }
+        
+        pdfUrl = url;
       }
     }
 

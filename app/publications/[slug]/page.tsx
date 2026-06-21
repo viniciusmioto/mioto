@@ -12,7 +12,7 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
   const resolvedParams = await params;
   const publications = getAllPublications();
   const publication = publications.find((item) => item.slug === resolvedParams.slug);
-  
+
   if (!publication) {
     notFound();
   }
@@ -38,7 +38,7 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
         <div className="publication-links">
           {publication.pdf ? (
             <Link className="meta-link" href={publication.pdf} target="_blank" rel="noreferrer">
-              Download PDF
+              View PDF
             </Link>
           ) : null}
           {publication.doi ? (

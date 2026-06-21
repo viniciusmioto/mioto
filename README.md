@@ -83,7 +83,7 @@ Simply edit the front matter fields:
 name: "Vinicius Mioto"
 role: "MSc Computer Science"
 avatar: "/avatar.jpg"
-email: "vsmioto@gmail.com"
+email: "vinicius [dot] mioto@mail.concordia.ca"
 github: "https://github.com/viniciusmioto"
 linkedin: "https://www.linkedin.com/in/viniciusmioto"
 scholar: "https://scholar.google.com/citations?user=UDQdcksAAAAJ&hl=en"

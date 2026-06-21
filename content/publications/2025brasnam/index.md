@@ -30,6 +30,7 @@ status:
 
 tags:
   - Network Science
+  - Scientometrics
 
 links:
   - type: pdf

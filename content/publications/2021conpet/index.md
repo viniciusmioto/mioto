@@ -38,6 +38,8 @@ summary: This paper was published in Portuguese (BR). Análise de Dados Estatís
 
 tags:
   - Data Science
+  - Software Engineering
+  - Education
 
 links:
   - type: pdf

@@ -9,7 +9,6 @@ interface HeroProps {
 
 export function Hero({ author }: HeroProps) {
   const socialLinks = [
-    { href: `mailto:${author.email}`, label: 'Email', icon: faAt },
     { href: author.github, label: 'GitHub', icon: faGithub },
     { href: author.linkedin, label: 'LinkedIn', icon: faLinkedin },
     { href: author.scholar, label: 'Google Scholar', icon: faGoogleScholar },
@@ -24,11 +23,12 @@ export function Hero({ author }: HeroProps) {
         <p className="hero-role">{author.role}</p>
         <div className="social-links">
           {socialLinks.map((link) => (
-            <a key={link.label} href={link.href} title={link.label} className="social-icon">
+            <a key={link.label} href={link.href} title={link.label} className="social-icon" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={link.icon} />
             </a>
           ))}
         </div>
+        <img src="/mioto_image.png" alt="Email Address" className="hero-email-image" />
       </div>
       <div className="hero-copy">
         <div className="hero-description" dangerouslySetInnerHTML={{ __html: author.description }} />

@@ -2,7 +2,7 @@
 name: "Vinicius Mioto"
 role: "MSc Computer Science"
 avatar: "/avatar.jpg"
-email: "vsmioto@gmail.com"
+email: "vinicius [dot] mioto [at] mail [dot] concordia [dot] ca"
 github: "https://github.com/viniciusmioto"
 linkedin: "https://www.linkedin.com/in/viniciusmioto"
 scholar: "https://scholar.google.com/citations?user=UDQdcksAAAAJ&hl=en"
