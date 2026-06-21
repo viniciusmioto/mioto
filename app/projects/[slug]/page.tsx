@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllProjects } from '../../../lib/content';
 import { SectionHeading } from '../../../components/SectionHeading';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
   const projects = getAllProjects();
@@ -23,7 +24,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       
       <div className="project-detail">
         {project.image ? (
-          <img className="project-image" src={project.image} alt={project.title} />
+          <Image className="project-image" src={project.image} alt={project.title} width={1200} height={630} />
         ) : null}
 
         <div className="project-meta">

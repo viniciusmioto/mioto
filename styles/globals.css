@@ -339,8 +339,8 @@ h6 {
 
 .hero-image img.hero-email-image {
   margin: 1rem 0 0;
-  max-width: 240px;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
   aspect-ratio: auto;
   border-radius: 0;

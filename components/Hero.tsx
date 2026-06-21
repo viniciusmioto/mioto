@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faGoogleScholar, faOrcid } from '@fortawesome/free-brands-svg-icons';
 import { AuthorProfile } from '../lib/data';
+import Image from 'next/image';
 
 interface HeroProps {
   author: AuthorProfile;
@@ -18,7 +19,7 @@ export function Hero({ author }: HeroProps) {
   return (
     <section className="hero">
       <div className="hero-image">
-        <img src={author.avatar} alt={`Profile photo of ${author.name}`} />
+        <Image src={author.avatar} alt={`Profile photo of ${author.name}`} width={320} height={320} priority />
         <h1 className="hero-name">{author.name}</h1>
         <p className="hero-role">{author.role}</p>
         <div className="social-links">
@@ -28,7 +29,7 @@ export function Hero({ author }: HeroProps) {
             </a>
           ))}
         </div>
-        <img src="/mioto_image.png" alt="Email Address" className="hero-email-image" />
+        <Image src="/mioto_image.png" alt="Email Address" className="hero-email-image" width={240} height={40} />
       </div>
       <div className="hero-copy">
         <div className="hero-description" dangerouslySetInnerHTML={{ __html: author.description }} />

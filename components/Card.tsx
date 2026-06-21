@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface CardProps {
   title: string;
@@ -47,7 +48,7 @@ export function Card({ title, description, href, tags = [], website, github, ima
         {image && (
           <div className="project-card-right">
             <Link href={href}>
-              <img src={image} alt={`Featured image for ${title}`} className="project-card-image" />
+              <Image src={image} alt={`Featured image for ${title}`} className="project-card-image" width={600} height={400} />
             </Link>
           </div>
         )}
