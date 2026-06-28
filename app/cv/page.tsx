@@ -1,16 +1,17 @@
 import Link from 'next/link';
+import HeroContent from '../../content/hero.md';
 import { getHeroData } from '../../lib/content';
 import { SectionHeading } from '../../components/SectionHeading';
 
-export default function CVPage() {
-  const author = getHeroData();
+export default async function CVPage() {
+  const author = await getHeroData();
   return (
     <div className="page-shell">
       <SectionHeading title="Curriculum Vitae" description="Education, work experience, and professional background." />
 
       <section className="panel-block">
         <h2>About</h2>
-        <div dangerouslySetInnerHTML={{ __html: author.description }} />
+        <HeroContent />
       </section>
 
       <section className="panel-block">

@@ -3,8 +3,8 @@ import { getAllPublications } from '../../lib/content';
 import { SectionHeading } from '../../components/SectionHeading';
 import { PublicationListItem } from '../../components/PublicationListItem';
 
-export default function PublicationsPage() {
-  const publications = getAllPublications();
+export default async function PublicationsPage() {
+  const publications = await getAllPublications();
 
   return (
     <div className="page-shell">

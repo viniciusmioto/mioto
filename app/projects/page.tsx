@@ -3,8 +3,8 @@ import { getAllProjects } from '../../lib/content';
 import { SectionHeading } from '../../components/SectionHeading';
 import { Card } from '../../components/Card';
 
-export default function ProjectsPage() {
-  const projects = getAllProjects();
+export default async function ProjectsPage() {
+  const projects = await getAllProjects();
   
   return (
     <div className="page-shell">

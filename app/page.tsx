@@ -1,20 +1,23 @@
 import Link from 'next/link';
+import HeroContent from '../content/hero.md';
 import { getHeroData, getAllPublications, getAllProjects } from '../lib/content';
 import { Hero } from '../components/Hero';
 import { SectionHeading } from '../components/SectionHeading';
 import { Card } from '../components/Card';
 import { PublicationListItem } from '../components/PublicationListItem';
 
-export default function HomePage() {
-  const author = getHeroData();
-  const allPublications = getAllPublications();
+export default async function HomePage() {
+  const author = await getHeroData();
+  const allPublications = await getAllPublications();
   const topPublications = allPublications.slice(0, 5);
-  const allProjects = getAllProjects();
+  const allProjects = await getAllProjects();
   const topProjects = allProjects.slice(0, 3);
 
   return (
     <>
-      <Hero author={author} />
+      <Hero author={author}>
+        <HeroContent />
+      </Hero>
       <div className="page-shell">
 
       <section>

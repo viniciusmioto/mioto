@@ -2,7 +2,6 @@ export interface AuthorProfile {
   name: string;
   role: string;
   avatar: string;
-  description: string;
   email: string;
   github: string;
   linkedin: string;
@@ -22,7 +21,6 @@ export interface Publication {
   venue: string;
   summary: string;
   abstract?: string;
-  body?: string;
   tags: string[];
   featured: boolean;
   doi?: string;
@@ -36,7 +34,6 @@ export interface Project {
   website?: string;
   github?: string;
   summary: string;
-  body: string;
   tags: string[];
   image?: string;
 }

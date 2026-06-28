@@ -6,9 +6,10 @@ import Image from 'next/image';
 
 interface HeroProps {
   author: AuthorProfile;
+  children?: React.ReactNode;
 }
 
-export function Hero({ author }: HeroProps) {
+export function Hero({ author, children }: HeroProps) {
   const socialLinks = [
     { href: author.github, label: 'GitHub', icon: faGithub },
     { href: author.linkedin, label: 'LinkedIn', icon: faLinkedin },
@@ -32,7 +33,7 @@ export function Hero({ author }: HeroProps) {
         <Image src="/mioto_image.png" alt="Email Address" className="hero-email-image" width={240} height={40} />
       </div>
       <div className="hero-copy">
-        <div className="hero-description" dangerouslySetInnerHTML={{ __html: author.description }} />
+        <div className="hero-description">{children}</div>
         <div className="hero-details">
           <div className="hero-detail">
             <h3>Education</h3>

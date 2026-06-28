@@ -1,17 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
 import { AuthorProfile, Publication, Project } from './data';
-
-/**
- * Convert a markdown string to an HTML string.
- */
-function renderMarkdown(markdown: string): string {
-  const result = remark().use(html, { sanitize: false }).processSync(markdown);
-  return String(result);
-}
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
@@ -28,7 +18,7 @@ export function getHeroData(): AuthorProfile {
     name: data.name,
     role: data.role,
     avatar: data.avatar,
-    description: renderMarkdown(content.trim()),
+    // description handled by mdx component imports
     email: data.email,
     github: data.github,
     linkedin: data.linkedin,
@@ -103,7 +93,7 @@ export function getAllPublications(): Publication[] {
       venue: data.publication ?? data.publication_short ?? '',
       summary: data.summary ?? '',
       abstract: data.abstract ?? '',
-      body: renderMarkdown(content.trim()),
+      // body handled by mdx component imports
       tags: data.tags ?? [],
       featured: data.featured ?? false,
       doi: data.doi,
@@ -172,7 +162,7 @@ export function getAllProjects(): Project[] {
       website: data.website || undefined,
       github: data.github || undefined,
       summary: data.summary ?? '',
-      body: renderMarkdown(content.trim()),
+      // body handled by mdx component imports
       tags: data.tags ?? [],
       image: imagePath,
     } as Project;

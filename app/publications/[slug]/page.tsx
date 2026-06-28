@@ -4,18 +4,20 @@ import { SectionHeading } from '../../../components/SectionHeading';
 import Link from 'next/link';
 
 export async function generateStaticParams() {
-  const publications = getAllPublications();
+  const publications = await getAllPublications();
   return publications.map((publication) => ({ slug: publication.slug }));
 }
 
 export default async function PublicationPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const publications = getAllPublications();
+  const publications = await getAllPublications();
   const publication = publications.find((item) => item.slug === resolvedParams.slug);
 
   if (!publication) {
     notFound();
   }
+
+  const { default: Post } = await import(`../../../content/publications/${resolvedParams.slug}/index.md`);
 
   return (
     <div className="page-shell">
@@ -55,12 +57,9 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
           </div>
         )}
 
-        {publication.body && (
           <div className="publication-body" style={{ marginTop: '2rem' }}>
-            {/* simple rendering of body text for now */}
-            <div dangerouslySetInnerHTML={{ __html: publication.body.replace(/\n/g, '<br />') }} />
+            <Post />
           </div>
-        )}
       </div>
       <div className="page-actions">
         <Link className="button button-secondary" href="/publications">
