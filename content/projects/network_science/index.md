@@ -1,18 +1,20 @@
 ---
-title: Social Network Analysis
+title: Collaboration Networks in Brazilian Computer Science
 date: 2024-08-24
 website: 
 github: "https://github.com/viniciusmioto/social_networks_analysis"
-summary: "I have been working on research projects in Network Science and graph mining, with a focus on applying network-based methods to real-world data analysis problems."
+summary: "I have been working on research projects in Network Science and Graph Mining, with a focus on applying network-based methods to real-world data analysis problems. In this project, we use this concepts on Co-authorship Networks to understand how Brazilian Computer Science researchers collaborate."
 tags:
-  - Data Science
+  - Social Network Analysis
+  - Co-authorship Networks
+  - Bibliometrics
 ---
 
 # Collaboration Networks in Brazilian Computer Science
 
 During my bachelor's, I picked up Albert-László Barabási's [Network Science](https://networksciencebook.com/) book for a research project. The premise is elegant: protein interactions, power grids, social media feeds, financial markets, and many other complex systems can be modeled as graphs, with objects as nodes and relationships as edges. Once you have a graph, you can measure things: who is central, what clusters form, how fast information spreads, and whether the network has the "small-world" property where any two nodes are surprisingly close [1].
 
-Scientific collaboration networks fell into this framework naturally and captivated me. I wanted to apply these ideas to Brazilian computer science to answer some questions that I had out of curiosity. The result is a peer-reviewed paper, *Beyond Boundaries: Collaboration Networks and Research Output in Brazilian Computer Science*, co-authored with [André Vignatti](https://www.inf.ufpr.br/vignatti/), published in the XIV Brazilian Workshop on Social Network Analysis and Mining (BraSNAM) [2]. This post is my attempt to bring the findings out of LaTeX and into plain language, while adding some context about the research.
+Scientific collaboration networks fell into this framework naturally and captivated me. I wanted to apply these ideas to Brazilian computer science to answer some questions that I had out of curiosity. The result is a peer-reviewed paper, [Beyond Boundaries: Collaboration Networks and Research Output in Brazilian Computer Science](https://sol.sbc.org.br/index.php/brasnam/article/view/36367), co-authored with [André Vignatti](https://www.inf.ufpr.br/vignatti/), published in the XIV Brazilian Workshop on Social Network Analysis and Mining (BraSNAM) [2]. This post is my attempt to bring the findings out of LaTeX and into plain language, while adding some context about the research.
 
 ## The Science of Measuring Science
 
@@ -121,12 +123,12 @@ We note that in highly cited publications, Brazilian authors form central hubs, 
 
 ## Discussion
 
-It is very interesting to see how collaboration varies within Computer Science subfields, and this gives us more context for understanding some of the reasons for research impact. Still, there are many other angles to explore. For instance, using another data source (Scopus, Semantic Scholar, Web of Science) would be great to improve data coverage and quality. Another thing that would help us to understand the collaboration dynamics is to compare Brazilian collaboration networks with those of other countries. For example, Canada, France, and Italy have a similar number of publications, so a few questions could be made: how do these countries’ collaboration networks look? Which are the countries they collaborate with the most? How does the citation disparity differ for each subfield in those countries? 
+It is very interesting to see how collaboration varies within Computer Science subfields, and this gives us more context for understanding some of the reasons for research impact. Still, there are many other angles to explore. For instance, using another data source (Scopus, Semantic Scholar, Web of Science) would be great to improve data coverage and quality. Another thing that would help us to understand the collaboration dynamics is to compare Brazilian collaboration networks with those of other countries. For example, Canada, France, and Italy have a similar number of publications and more citations than Brazil, so a few questions could be made: how do these countries’ collaboration networks look? Which are the countries they collaborate with the most? How does the citation disparity differ for each subfield in those countries? 
 
 ## References
 
-[1] https://networksciencebook.com/
-[2] https://sol.sbc.org.br/index.php/brasnam/article/view/36367
-[3] https://researchmusings.substack.com/p/scientometrics-or-bibliometrics
-[4] https://link.springer.com/article/10.1023/A:1017919924342
+- [1] https://networksciencebook.com/
+- [2] https://sol.sbc.org.br/index.php/brasnam/article/view/36367
+- [3] https://researchmusings.substack.com/p/scientometrics-or-bibliometrics
+- [4] https://link.springer.com/article/10.1023/A:1017919924342
 

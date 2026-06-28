@@ -35,7 +35,7 @@ export default async function HomePage() {
       </section>
 
       <section>
-        <SectionHeading title="Selected projects" description="Research and engineering work drawn from current and past collaborations." />
+        <SectionHeading title="Selected projects" description="" />
         <div className="grid-card-list">
           {topProjects.map((project) => (
             <Card 
