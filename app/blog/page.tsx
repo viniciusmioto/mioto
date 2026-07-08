@@ -1,28 +1,29 @@
 import Link from 'next/link';
-import { blog } from '../../lib/data';
+import { getAllBlogs } from '../../lib/content';
 import { SectionHeading } from '../../components/SectionHeading';
+import { BlogCard } from '../../components/BlogCard';
 
 export default function BlogPage() {
+  const blogs = getAllBlogs();
+
   return (
     <div className="page-shell">
       <SectionHeading title="Blog" description="Recent blog posts and articles." />
-      {blog.length === 0 ? (
+      {blogs.length === 0 ? (
         <div className="empty-state">
           <p>No blog posts are published yet. Check back soon for updates.</p>
         </div>
       ) : (
-        <div className="grid-card-list">
-          {blog.map((post) => (
-            <article key={post.title} className="card">
-              <h3>{post.title}</h3>
-              <p className="meta-line">{post.event} • {post.date}</p>
-              <p>{post.abstract}</p>
-            </article>
+        <div className="single-column-list">
+          {blogs.map((post) => (
+            <BlogCard key={post.slug} post={post} />
           ))}
         </div>
       )}
-      <div className="page-actions">
-        <Link className="button" href="/">Back to home</Link>
+      <div className="section-actions" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+        <a className="button button-secondary" href="https://blog.ptidej.net/author/vinicius/" target="_blank" rel="noopener noreferrer">
+          View all blogs
+        </a>
       </div>
     </div>
   );

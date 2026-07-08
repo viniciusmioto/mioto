@@ -7,7 +7,7 @@ import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 
 const navItems = [
   { href: '/publications', label: 'Publications' },
-  { href: '/projects', label: 'Portfolio' },
+  { href: 'https://github.com/viniciusmioto', label: 'Portfolio', external: true },
   { href: '/cv', label: 'CV' },
   { href: '/blog', label: 'Blog' },
 ];
@@ -50,7 +50,12 @@ export function Header() {
 
         <nav className={`site-nav${menuOpen ? ' open' : ''}`}>
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
+            <Link 
+              key={item.href} 
+              href={item.href} 
+              onClick={() => setMenuOpen(false)}
+              {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
               {item.label}
             </Link>
           ))}

@@ -39,11 +39,10 @@ export interface Project {
 }
 
 export interface Blog {
+  slug: string;
   title: string;
-  event: string;
+  link: string;
+  image: string;
   date: string;
-  location: string;
-  abstract: string;
+  summary?: string;
 }
-
-export const blog: Blog[] = [];

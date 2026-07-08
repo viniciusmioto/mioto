@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import HeroContent from '../content/hero.md';
-import { getHeroData, getAllPublications, getAllProjects } from '../lib/content';
+import { getHeroData, getAllPublications, getAllProjects, getAllBlogs } from '../lib/content';
 import { Hero } from '../components/Hero';
 import { SectionHeading } from '../components/SectionHeading';
 import { Card } from '../components/Card';
 import { PublicationListItem } from '../components/PublicationListItem';
+import { BlogCard } from '../components/BlogCard';
 
 export default async function HomePage() {
   const author = await getHeroData();
@@ -12,6 +13,8 @@ export default async function HomePage() {
   const topPublications = allPublications.slice(0, 5);
   const allProjects = await getAllProjects();
   const topProjects = allProjects.slice(0, 3);
+  const allBlogs = getAllBlogs();
+  const topBlogs = allBlogs.slice(0, 3);
 
   return (
     <>
@@ -35,6 +38,20 @@ export default async function HomePage() {
       </section>
 
       <section>
+        <SectionHeading title="Recent blog posts" />
+        <div className="single-column-list">
+          {topBlogs.map((post) => (
+            <BlogCard key={post.slug} post={post} />
+          ))}
+        </div>
+        <div className="section-actions" style={{ marginTop: '1.5rem' }}>
+          <Link className="button button-secondary" href="/blog">
+            View all blogs
+          </Link>
+        </div>
+      </section>
+
+      {/* <section>
         <SectionHeading title="Selected projects" description="" />
         <div className="grid-card-list">
           {topProjects.map((project) => (
@@ -55,7 +72,7 @@ export default async function HomePage() {
             View full portfolio
           </Link>
         </div>
-      </section>
+      </section> */}
     </div>
       </>
   );

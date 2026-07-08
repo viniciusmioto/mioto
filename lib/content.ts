@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { AuthorProfile, Publication, Project } from './data';
+import { AuthorProfile, Publication, Project, Blog } from './data';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
@@ -178,3 +178,51 @@ export function getAllProjects(): Project[] {
   });
 }
 
+/**
+ * Read all markdown files in content/blogs and return them sorted by date (newest first).
+ */
+export function getAllBlogs(): Blog[] {
+  const blogsDirectory = path.join(contentDirectory, 'blogs');
+  
+  let folderNames: string[] = [];
+  try {
+    if (fs.existsSync(blogsDirectory)) {
+      folderNames = fs.readdirSync(blogsDirectory).filter((name) => {
+        const folderPath = path.join(blogsDirectory, name);
+        return fs.statSync(folderPath).isDirectory();
+      });
+    }
+  } catch (error) {
+    console.error("Could not read blogs directory", error);
+    return [];
+  }
+
+  const blogsData: Blog[] = folderNames.map((slug) => {
+    const fullPath = path.join(blogsDirectory, slug, 'index.md');
+    
+    if (!fs.existsSync(fullPath)) {
+      return null;
+    }
+
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data } = matter(fileContents);
+
+    return {
+      slug,
+      title: data.title,
+      link: data.link,
+      image: data.image,
+      date: data.date ? String(data.date) : '',
+      summary: data.summary,
+    } as Blog;
+  }).filter(Boolean) as Blog[];
+
+  // Sort blogs by date in descending order
+  return blogsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+}
