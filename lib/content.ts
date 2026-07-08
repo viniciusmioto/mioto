@@ -42,7 +42,7 @@ export function getAllPublications(): Publication[] {
   try {
     folderNames = fs.readdirSync(publicationsDirectory).filter((name) => {
       const folderPath = path.join(publicationsDirectory, name);
-      return fs.statSync(folderPath).isDirectory();
+      return fs.statSync(folderPath).isDirectory() && name !== 'placeholder';
     });
   } catch (error) {
     console.error("Could not read publications directory", error);
@@ -122,7 +122,7 @@ export function getAllProjects(): Project[] {
     if (fs.existsSync(projectsDirectory)) {
       folderNames = fs.readdirSync(projectsDirectory).filter((name) => {
         const folderPath = path.join(projectsDirectory, name);
-        return fs.statSync(folderPath).isDirectory();
+        return fs.statSync(folderPath).isDirectory() && name !== 'placeholder';
       });
     }
   } catch (error) {
