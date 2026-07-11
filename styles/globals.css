@@ -788,3 +788,18 @@ h6 {
   }
 }
 
+.news-headline p {
+  display: inline;
+  margin: 0;
+}
+
+.news-headline a {
+  color: var(--accent-color, #0070f3);
+  text-decoration: underline;
+}
+
+.news-headline a:hover {
+  text-decoration: none;
+}
+
+

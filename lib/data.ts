@@ -46,3 +46,8 @@ export interface Blog {
   date: string;
   summary?: string;
 }
+
+export interface NewsItem {
+  date: string;
+  headline: string;
+}

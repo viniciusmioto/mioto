@@ -10,6 +10,7 @@ const navItems = [
   { href: 'https://github.com/viniciusmioto', label: 'Portfolio', external: true },
   { href: '/cv', label: 'CV' },
   { href: '/blog', label: 'Blog' },
+  { href: '/news', label: 'News' },
 ];
 
 export function Header() {

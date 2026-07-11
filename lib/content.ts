@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { AuthorProfile, Publication, Project, Blog } from './data';
+import { remark } from 'remark';
+import html from 'remark-html';
+import { AuthorProfile, Publication, Project, Blog, NewsItem } from './data';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
@@ -219,6 +221,42 @@ export function getAllBlogs(): Blog[] {
 
   // Sort blogs by date in descending order
   return blogsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+}
+
+/**
+ * Read news.md and return parsed news items sorted by date (newest first).
+ */
+export async function getAllNews(): Promise<NewsItem[]> {
+  const filePath = path.join(contentDirectory, 'news', 'news.md');
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
+
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const { data } = matter(fileContents);
+  const newsList = data.news || [];
+
+  const parsedNews = await Promise.all(
+    newsList.map(async (item: any) => {
+      const processedContent = await remark()
+        .use(html)
+        .process(item.headline);
+      const headlineHtml = processedContent.toString();
+      
+      return {
+        date: item.date ? String(item.date) : '',
+        headline: headlineHtml,
+      };
+    })
+  );
+
+  return parsedNews.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
