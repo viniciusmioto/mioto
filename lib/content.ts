@@ -19,6 +19,7 @@ export function getHeroData(): AuthorProfile {
   return {
     name: data.name,
     role: data.role,
+    location: data.location ?? '',
     avatar: data.avatar,
     // description handled by mdx component imports
     email: data.email,

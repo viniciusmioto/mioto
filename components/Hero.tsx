@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faGraduationCap, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faGoogleScholar, faOrcid } from '@fortawesome/free-brands-svg-icons';
 import { AuthorProfile } from '../lib/data';
 import Image from 'next/image';
@@ -23,6 +23,11 @@ export function Hero({ author, children }: HeroProps) {
         <Image src={author.avatar} alt={`Profile photo of ${author.name}`} width={320} height={320} priority />
         <h1 className="hero-name">{author.name}</h1>
         <p className="hero-role">{author.role}</p>
+        {author.location && (
+          <p className="hero-location">
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" /> {author.location}
+          </p>
+        )}
         <div className="social-links">
           {socialLinks.map((link) => (
             <a key={link.label} href={link.href} title={link.label} className="social-icon" target="_blank" rel="noopener noreferrer">

@@ -1,6 +1,7 @@
 export interface AuthorProfile {
   name: string;
   role: string;
+  location: string;
   avatar: string;
   email: string;
   github: string;

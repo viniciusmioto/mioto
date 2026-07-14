@@ -90,7 +90,7 @@ scholar: "https://scholar.google.com/citations?user=UDQdcksAAAAJ&hl=en"
 orcid: "https://orcid.org/0000-0003-1343-7183"
 
 organizations:
-  - name: "Concordia University Montreal"
+  - name: "Concordia University Montréal"
     url: "https://www.concordia.ca/"
 
 interests:
@@ -99,7 +99,7 @@ interests:
 
 education:
   - area: "MSc Computer Science"
-    institution: "Concordia University Montreal"
+    institution: "Concordia University Montréal"
     date_start: "2026-05"
     date_end: "2028-07"
 
@@ -181,7 +181,7 @@ export const blog: Blog[] = [
     title: "My First Blog Post",
     event: "Tech Insights",
     date: "2026-05-21",
-    location: "Montreal, QC",
+    location: "Montréal, QC",
     abstract: "A short preview of the blog post details..."
   }
 ];
