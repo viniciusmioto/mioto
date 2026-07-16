@@ -5,7 +5,7 @@ news:
   - date: "2026-05-11"
     headline: "📚 Started my MSc. in Computer Science at _Concordia University_, and joined the [Ptidej team](https://www.ptidej.net/)."
   - date: "2025-09-25"
-    headline: "🎓 Successfully defended my undergraduate thesis and earned my B.Sc. in Computer Science from _Universidade Federal do Paraná_"
+    headline: "🎓 Successfully defended my [undergraduate thesis](https://www.inf.ufpr.br/bcc/tcc/2025/2025%20Beyond%20Boundaries%20-%20Collaboration%20Networks%20And%20Research%20Output%20In%20Brazilian%20Computer%20Science.pdf) and earned my B.Sc. in Computer Science from _Universidade Federal do Paraná_"
   - date: "2025-04-29"
     headline: "📄 Presented a paper at the [International Workshop on Games and Software Engineering](https://conf.researchr.org/details/icse-2025/gas-2025-papers/3/A-Mapping-of-Recording-based-Game-Test-Automation-Tools) - ICSE'25 (Ottawa, Canada)"
   - date: "2024-08-29"

@@ -1,6 +1,9 @@
 ---
 name: "Vinicius Mioto"
 role: "MSc Computer Science"
+organizations:
+  - name: "Concordia University"
+    url: "https://www.concordia.ca/"
 location: "Montréal, Québec 🇨🇦"
 avatar: "/avatar.jpg"
 email: "vinicius [dot] mioto [at] mail [dot] concordia [dot] ca"
@@ -9,9 +12,6 @@ linkedin: "https://www.linkedin.com/in/viniciusmioto"
 scholar: "https://scholar.google.com/citations?user=UDQdcksAAAAJ&hl=en"
 orcid: "https://orcid.org/0000-0003-1343-7183"
 
-organizations:
-  - name: "Concordia University Montréal"
-    url: "https://www.concordia.ca/"
 
 interests:
   - "🤖 Artificial Intelligence"
