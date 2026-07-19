@@ -1,0 +1,268 @@
+[
+  {
+    "city": "Curitiba",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.4284,
+    "longitude": -49.2733
+  },
+  {
+    "city": "Colombo",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.29167,
+    "longitude": -49.22417
+  },
+  {
+    "city": "Bocaiúva do Sul",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.2071,
+    "longitude": -49.1140
+  },
+  {
+    "city": "Pinhais",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.4447,
+    "longitude": -49.1925
+  },
+  {
+    "city": "São José dos Pinhais",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.5313,
+    "longitude": -49.2031
+  },
+  {
+    "city": "Araucária",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.5931,
+    "longitude": -49.4107
+  },
+  {
+    "city": "Tijucas do Sul",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.9311,
+    "longitude": -49.1778
+  },
+  {
+    "city": "Londrina",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -23.3045,
+    "longitude": -51.1696
+  },
+  {
+    "city": "Cianorte",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -23.6639,
+    "longitude": -52.6053
+  },
+  {
+    "city": "Maringá",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -23.4205,
+    "longitude": -51.9331
+  },
+  {
+    "city": "Foz do Iguaçu",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.5478,
+    "longitude": -54.5882
+  },
+  {
+    "city": "Faxinal",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -24.0008,
+    "longitude": -51.3194
+  },
+  {
+    "city": "Matinhos",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.8177,
+    "longitude": -48.5345
+  },
+  {
+    "city": "Guaratuba",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.8826,
+    "longitude": -48.5747
+  },
+  {
+    "city": "Pontal do Paraná",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.6736,
+    "longitude": -48.5111
+  },
+  {
+    "city": "Morretes",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.4769,
+    "longitude": -48.8345
+  },
+  {
+    "city": "Antonina",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.4289,
+    "longitude": -48.7119
+  },
+  {
+    "city": "Ponta Grossa",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -25.0994,
+    "longitude": -50.1583
+  },
+  {
+    "city": "Telêmaco Borba",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -24.3245,
+    "longitude": -50.6156
+  },
+  {
+    "city": "Itapoá",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -26.1158,
+    "longitude": -48.6189
+  },
+  {
+    "city": "Itajaí",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -26.9101,
+    "longitude": -48.6705
+  },
+  {
+    "city": "Balneário Camboriú",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -26.9926,
+    "longitude": -48.6352
+  },
+  {
+    "city": "Florianópolis",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -27.5949,
+    "longitude": -48.5482
+  },
+  {
+    "city": "Pomerode",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -26.7406,
+    "longitude": -49.1769
+  },
+  {
+    "city": "Blumenau",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -26.9194,
+    "longitude": -49.0661
+  },
+  {
+    "city": "Porto Belo",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -27.1578,
+    "longitude": -48.5531
+  },
+  {
+    "city": "Bombinhas",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -27.1386,
+    "longitude": -48.5147
+  },
+  {
+    "city": "Penha",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -26.7753,
+    "longitude": -48.6464
+  },
+  {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -23.5505,
+    "longitude": -46.6333
+  },
+  {
+    "city": "Limeira",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -22.5648,
+    "longitude": -47.4017
+  },
+  {
+    "city": "Puerto Iguazú",
+    "country": "Argentina",
+    "flag": "🇦🇷",
+    "latitude": -25.5991,
+    "longitude": -54.5736
+  },
+  {
+    "city": "Ciudad del Este",
+    "country": "Paraguay",
+    "flag": "🇵🇾",
+    "latitude": -25.5097,
+    "longitude": -54.6111
+  },
+  {
+    "city": "Montreal",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "latitude": 45.5019,
+    "longitude": -73.5674
+  },
+  {
+    "city": "Toronto",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "latitude": 43.6532,
+    "longitude": -79.3832
+  },
+  {
+    "city": "Quebec City",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "latitude": 46.8139,
+    "longitude": -71.2080
+  },
+  {
+    "city": "Gatineau",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "latitude": 45.4765,
+    "longitude": -75.7013
+  },
+  {
+    "city": "Ottawa",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "latitude": 45.4215,
+    "longitude": -75.6972
+  },
+  {
+    "city": "Saskatoon",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "latitude": 52.1332,
+    "longitude": -106.6700
+  }
+]

@@ -68,31 +68,12 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* <section>
-        <SectionHeading title="Selected projects" description="" />
-        <div className="grid-card-list">
-          {topProjects.map((project) => (
-            <Card 
-              key={project.slug} 
-              title={project.title} 
-              description={project.summary} 
-              href={`/projects/${project.slug}`} 
-              tags={project.tags}
-              website={project.website}
-              github={project.github}
-              image={project.image}
-            />
-          ))}
-        </div>
-        <div className="section-actions" style={{ marginTop: '1.5rem' }}>
-          <Link className="button button-secondary" href="/projects">
-            View full portfolio
+        <section style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', marginBottom: '1.5rem' }}>
+          <Link className="button button-primary" href="/about" style={{ padding: '0.8rem 2.2rem', fontSize: '1.1rem', fontWeight: '600' }}>
+            More about me
           </Link>
-        </div>
-      </section> */}
+        </section>
       </div>
-
-
     </>
   );
 }

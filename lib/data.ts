@@ -52,3 +52,12 @@ export interface NewsItem {
   date: string;
   headline: string;
 }
+
+export interface VisitedCity {
+  city: string;
+  country: string;
+  flag?: string;
+  latitude: number;
+  longitude: number;
+}
+

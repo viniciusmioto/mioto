@@ -3,9 +3,10 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { AuthorProfile, Publication, Project, Blog, NewsItem } from './data';
+import { AuthorProfile, Publication, Project, Blog, NewsItem, VisitedCity } from './data';
 
 const contentDirectory = path.join(process.cwd(), 'content');
+
 
 /**
  * Parse content/hero.md and return a typed AuthorProfile.
@@ -265,3 +266,44 @@ export async function getAllNews(): Promise<NewsItem[]> {
     }
   });
 }
+
+/**
+ * Read content/travel/cities.json and return parsed VisitedCity[].
+ */
+export function getVisitedCities(): VisitedCity[] {
+  const filePath = path.join(contentDirectory, 'travel', 'cities.json');
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
+
+  try {
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(fileContents) as VisitedCity[];
+  } catch (error) {
+    console.error("Could not read travel cities.json", error);
+    return [];
+  }
+}
+
+/**
+ * Read content/about.md and return parsed HTML string.
+ */
+export async function getAboutBioHtml(): Promise<string> {
+  const filePath = path.join(contentDirectory, 'about.md');
+  if (!fs.existsSync(filePath)) {
+    return '';
+  }
+
+  try {
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const processedContent = await remark()
+      .use(html)
+      .process(fileContents);
+    return processedContent.toString();
+  } catch (error) {
+    console.error("Could not parse about.md", error);
+    return '';
+  }
+}
+
+
