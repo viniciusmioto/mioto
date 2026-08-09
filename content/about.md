@@ -1,6 +1,6 @@
 # 👤 About Me
 
-I was born in Curitiba, Paraná, Brazil, in 2001. My journey in technology began during high school at Instituto Federal do Paraná (IFPR), where I started studying Informatics in 2016. Alongside the regular high school curriculum, I completed a technical diploma in Informatics, which introduced me to programming and sparked my interest in software development.
+I was born in Curitiba (PR), Brazil, in 2001. My journey in technology began during high school at Instituto Federal do Paraná (IFPR), where I started studying Informatics in 2016. Alongside the regular high school curriculum, I completed a technical diploma in Informatics, which introduced me to programming and sparked my interest in software development.
 
 In 2020, I began my Bachelor’s degree in Computer Science and graduated in 2025. Throughout my undergraduate studies, I participated in research projects, internships, and other academic activities that allowed me to explore different areas of computing and develop my skills as a researcher and software engineer.
 
