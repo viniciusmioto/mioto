@@ -210,6 +210,20 @@
     "longitude": -47.4017
   },
   {
+    "city": "Atibaia",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -23.117,
+    "longitude": -46.550
+  },
+  {
+    "city": "Aparecida do Norte",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "latitude": -22.833,
+    "longitude": -45.233
+  },
+  {
     "city": "Puerto Iguazú",
     "country": "Argentina",
     "flag": "🇦🇷",
