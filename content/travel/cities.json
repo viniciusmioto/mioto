@@ -4,286 +4,327 @@
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.4284,
-    "longitude": -49.2733
+    "longitude": -49.2733,
+    "countryCode": "BR"
   },
   {
     "city": "Colombo",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.29167,
-    "longitude": -49.22417
+    "longitude": -49.22417,
+    "countryCode": "BR"
   },
   {
     "city": "Bocaiúva do Sul",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.2071,
-    "longitude": -49.1140
+    "longitude": -49.1140,
+    "countryCode": "BR"
   },
   {
     "city": "Pinhais",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.4447,
-    "longitude": -49.1925
+    "longitude": -49.1925,
+    "countryCode": "BR"
   },
   {
     "city": "São José dos Pinhais",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.5313,
-    "longitude": -49.2031
+    "longitude": -49.2031,
+    "countryCode": "BR"
   },
   {
     "city": "Araucária",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.5931,
-    "longitude": -49.4107
+    "longitude": -49.4107,
+    "countryCode": "BR"
   },
   {
     "city": "Tijucas do Sul",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.9311,
-    "longitude": -49.1778
+    "longitude": -49.1778,
+    "countryCode": "BR"
   },
   {
     "city": "Londrina",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -23.3045,
-    "longitude": -51.1696
+    "longitude": -51.1696,
+    "countryCode": "BR"
   },
   {
     "city": "Cianorte",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -23.6639,
-    "longitude": -52.6053
+    "longitude": -52.6053,
+    "countryCode": "BR"
   },
   {
     "city": "Maringá",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -23.4205,
-    "longitude": -51.9331
+    "longitude": -51.9331,
+    "countryCode": "BR"
   },
   {
     "city": "Foz do Iguaçu",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.5478,
-    "longitude": -54.5882
+    "longitude": -54.5882,
+    "countryCode": "BR"
   },
   {
     "city": "Faxinal",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -24.0008,
-    "longitude": -51.3194
+    "longitude": -51.3194,
+    "countryCode": "BR"
   },
   {
     "city": "Matinhos",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.8177,
-    "longitude": -48.5345
+    "longitude": -48.5345,
+    "countryCode": "BR"
   },
   {
     "city": "Guaratuba",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.8826,
-    "longitude": -48.5747
+    "longitude": -48.5747,
+    "countryCode": "BR"
   },
   {
     "city": "Pontal do Paraná",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.6736,
-    "longitude": -48.5111
+    "longitude": -48.5111,
+    "countryCode": "BR"
   },
   {
     "city": "Morretes",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.4769,
-    "longitude": -48.8345
+    "longitude": -48.8345,
+    "countryCode": "BR"
   },
   {
     "city": "Antonina",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.4289,
-    "longitude": -48.7119
+    "longitude": -48.7119,
+    "countryCode": "BR"
   },
   {
     "city": "Ponta Grossa",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.0994,
-    "longitude": -50.1583
+    "longitude": -50.1583,
+    "countryCode": "BR"
   },
   {
     "city": "Telêmaco Borba",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -24.3245,
-    "longitude": -50.6156
+    "longitude": -50.6156,
+    "countryCode": "BR"
   },
   {
     "city": "Quitandinha",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -25.8757,
-    "longitude": -49.4879
+    "longitude": -49.4879,
+    "countryCode": "BR"
   },
   {
     "city": "Itapoá",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -26.1158,
-    "longitude": -48.6189
+    "longitude": -48.6189,
+    "countryCode": "BR"
   },
   {
     "city": "Itajaí",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -26.9101,
-    "longitude": -48.6705
+    "longitude": -48.6705,
+    "countryCode": "BR"
   },
   {
     "city": "Balneário Camboriú",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -26.9926,
-    "longitude": -48.6352
+    "longitude": -48.6352,
+    "countryCode": "BR"
   },
   {
     "city": "Florianópolis",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -27.5949,
-    "longitude": -48.5482
+    "longitude": -48.5482,
+    "countryCode": "BR"
   },
   {
     "city": "Pomerode",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -26.7406,
-    "longitude": -49.1769
+    "longitude": -49.1769,
+    "countryCode": "BR"
   },
   {
     "city": "Blumenau",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -26.9194,
-    "longitude": -49.0661
+    "longitude": -49.0661,
+    "countryCode": "BR"
   },
   {
     "city": "Porto Belo",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -27.1578,
-    "longitude": -48.5531
+    "longitude": -48.5531,
+    "countryCode": "BR"
   },
   {
     "city": "Bombinhas",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -27.1386,
-    "longitude": -48.5147
+    "longitude": -48.5147,
+    "countryCode": "BR"
   },
   {
     "city": "Penha",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -26.7753,
-    "longitude": -48.6464
+    "longitude": -48.6464,
+    "countryCode": "BR"
   },
   {
     "city": "São Paulo",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -23.5505,
-    "longitude": -46.6333
+    "longitude": -46.6333,
+    "countryCode": "BR"
   },
   {
     "city": "Limeira",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -22.5648,
-    "longitude": -47.4017
+    "longitude": -47.4017,
+    "countryCode": "BR"
   },
   {
     "city": "Atibaia",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -23.117,
-    "longitude": -46.550
+    "longitude": -46.550,
+    "countryCode": "BR"
   },
   {
     "city": "Aparecida do Norte",
     "country": "Brazil",
     "flag": "🇧🇷",
     "latitude": -22.833,
-    "longitude": -45.233
+    "longitude": -45.233,
+    "countryCode": "BR"
   },
   {
     "city": "Puerto Iguazú",
     "country": "Argentina",
     "flag": "🇦🇷",
     "latitude": -25.5991,
-    "longitude": -54.5736
+    "longitude": -54.5736,
+    "countryCode": "AR"
   },
   {
     "city": "Ciudad del Este",
     "country": "Paraguay",
     "flag": "🇵🇾",
     "latitude": -25.5097,
-    "longitude": -54.6111
+    "longitude": -54.6111,
+    "countryCode": "PY"
   },
   {
     "city": "Montreal",
     "country": "Canada",
     "flag": "🇨🇦",
     "latitude": 45.5019,
-    "longitude": -73.5674
+    "longitude": -73.5674,
+    "countryCode": "CA"
   },
   {
     "city": "Toronto",
     "country": "Canada",
     "flag": "🇨🇦",
     "latitude": 43.6532,
-    "longitude": -79.3832
+    "longitude": -79.3832,
+    "countryCode": "CA"
   },
   {
     "city": "Quebec City",
     "country": "Canada",
     "flag": "🇨🇦",
     "latitude": 46.8139,
-    "longitude": -71.2080
+    "longitude": -71.2080,
+    "countryCode": "CA"
   },
   {
     "city": "Gatineau",
     "country": "Canada",
     "flag": "🇨🇦",
     "latitude": 45.4765,
-    "longitude": -75.7013
+    "longitude": -75.7013,
+    "countryCode": "CA"
   },
   {
     "city": "Ottawa",
     "country": "Canada",
     "flag": "🇨🇦",
     "latitude": 45.4215,
-    "longitude": -75.6972
+    "longitude": -75.6972,
+    "countryCode": "CA"
   },
   {
     "city": "Saskatoon",
     "country": "Canada",
     "flag": "🇨🇦",
     "latitude": 52.1332,
-    "longitude": -106.6700
+    "longitude": -106.6700,
+    "countryCode": "CA"
   }
 ]

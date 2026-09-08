@@ -26,9 +26,49 @@ const createCustomPinIcon = (city: VisitedCity) => {
   });
 };
 
+const cartoBasemapKey = process.env.NEXT_PUBLIC_CARTO_BASEMAP_KEY;
+
 const darkTileProvider = {
-  url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  // CARTO basemap keys are supplied as a query parameter. This component runs
+  // in the browser, so the key must be a restricted public basemap key.
+  url: `https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png?key=${encodeURIComponent(cartoBasemapKey ?? '')}`,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+};
+
+// The country GeoJSON uses ISO 3166-1 alpha-3 identifiers. Convert them to
+// the two-letter form used by Unicode regional-indicator flag emoji.
+const iso2ByIso3 = Object.fromEntries(
+  `AFG:AF AGO:AO ALB:AL ARE:AE ARG:AR ARM:AM ATA:AQ ATF:TF AUS:AU AUT:AT AZE:AZ
+  BDI:BI BEL:BE BEN:BJ BFA:BF BGD:BD BGR:BG BHS:BS BIH:BA BLR:BY BLZ:BZ BMU:BM
+  BOL:BO BRA:BR BRN:BN BTN:BT BWA:BW CAF:CF CAN:CA CHE:CH CHL:CL CHN:CN CIV:CI
+  CMR:CM COD:CD COG:CG COL:CO CRI:CR CUB:CU CYP:CY CZE:CZ DEU:DE DJI:DJ DNK:DK
+  DOM:DO DZA:DZ ECU:EC EGY:EG ERI:ER ESP:ES EST:EE ETH:ET FIN:FI FJI:FJ FLK:FK
+  FRA:FR GAB:GA GBR:GB GEO:GE GHA:GH GIN:GN GMB:GM GNB:GW GNQ:GQ GRC:GR GRL:GL
+  GTM:GT GUF:GF GUY:GY HND:HN HRV:HR HTI:HT HUN:HU IDN:ID IND:IN IRL:IE IRN:IR
+  IRQ:IQ ISL:IS ISR:IL ITA:IT JAM:JM JOR:JO JPN:JP KAZ:KZ KEN:KE KGZ:KG KHM:KH
+  KOR:KR CS-KM:XK KWT:KW LAO:LA LBN:LB LBR:LR LBY:LY LKA:LK LSO:LS LTU:LT LUX:LU
+  LVA:LV MAR:MA MDA:MD MDG:MG MEX:MX MKD:MK MLI:ML MLT:MT MMR:MM MNE:ME MNG:MN
+  MOZ:MZ MRT:MR MWI:MW MYS:MY NAM:NA NCL:NC NER:NE NGA:NG NIC:NI NLD:NL NOR:NO
+  NPL:NP NZL:NZ OMN:OM PAK:PK PAN:PA PER:PE PHL:PH PNG:PG POL:PL PRI:PR PRK:KP
+  PRT:PT PRY:PY QAT:QA ROU:RO RUS:RU RWA:RW ESH:EH SAU:SA SDN:SD SSD:SS SEN:SN
+  SLB:SB SLE:SL SLV:SV SOM:SO SRB:RS SUR:SR SVK:SK SVN:SI SWE:SE SWZ:SZ SYR:SY
+  TCD:TD TGO:TG THA:TH TJK:TJ TKM:TM TLS:TL TTO:TT TUN:TN TUR:TR TWN:TW TZA:TZ
+  UGA:UG UKR:UA URY:UY USA:US UZB:UZ VEN:VE VNM:VN VUT:VU PSE:PS YEM:YE ZAF:ZA
+  ZMB:ZM ZWE:ZW`
+    .trim()
+    .split(/\s+/)
+    .map((entry) => entry.split(':'))
+);
+
+const flagEmojiForCountry = (feature: any) => {
+  const iso2 = iso2ByIso3[feature.id];
+
+  if (iso2) {
+    return String.fromCodePoint(...iso2.split('').map((letter: string) => 0x1f1a5 + letter.charCodeAt(0)));
+  }
+
+  // These two features share a placeholder GeoJSON ID, so use their names.
+  return feature.properties?.name === 'Northern Cyprus' ? '🇨🇾' : feature.properties?.name === 'Somaliland' ? '🇸🇴' : '';
 };
 
 export function TravelMapInner({ cities }: TravelMapInnerProps) {
@@ -63,6 +103,10 @@ export function TravelMapInner({ cities }: TravelMapInnerProps) {
 
   // Initialize map instance safely
   useEffect(() => {
+    if (!cartoBasemapKey) {
+      console.warn('CARTO basemap key is not configured. Set NEXT_PUBLIC_CARTO_BASEMAP_KEY to remove the CARTO watermark.');
+    }
+
     const container = containerRef.current;
     if (!container) return;
 
@@ -133,9 +177,10 @@ export function TravelMapInner({ cities }: TravelMapInnerProps) {
     const onEachFeature = (feature: any, layer: L.Layer) => {
       const name = feature.properties?.name || feature.properties?.ADMIN || feature.id;
       const isVisited = visitedCountries.has(name?.toLowerCase());
+      const flag = flagEmojiForCountry(feature);
 
       layer.bindTooltip(
-        `<strong>${name}</strong>${isVisited ? ' <span class="visited-badge">Visited</span>' : ''}`,
+        `<strong>${flag ? `${flag} ` : ''}${name}</strong>${isVisited ? ' <span class="visited-badge">Visited</span>' : ''}`,
         { sticky: true, className: 'country-tooltip' }
       );
 

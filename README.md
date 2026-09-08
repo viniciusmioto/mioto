@@ -18,11 +18,31 @@ npm install
 ```
 
 ### Development Server
-Run the local development server:
+Create your local environment file and add your own CARTO Basemaps key:
+
+```bash
+cp -n .env.example .env.local
+```
+
+Then set `NEXT_PUBLIC_CARTO_BASEMAP_KEY` in `.env.local` and start the server:
+
 ```bash
 npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+`NEXT_PUBLIC_CARTO_BASEMAP_KEY` is included in the browser bundle because the map requests CARTO tiles from the visitor's browser. It is not a server secret: keep it out of Git, use a key dedicated to this site, and limit it in CARTO to your local and production domains. Do not use a CARTO account/API token in this variable.
+
+### Vercel environment configuration
+
+In the Vercel dashboard, open this project and go to **Settings → Environment Variables**. Add:
+
+```text
+Name:  NEXT_PUBLIC_CARTO_BASEMAP_KEY
+Value: <your CARTO Basemaps key>
+```
+
+Select **Production**, **Preview**, and **Development** as needed, save it, and redeploy. Environment variables prefixed with `NEXT_PUBLIC_` are embedded when Next.js builds, so existing deployments need a new deployment after adding or changing the key. Add only the basemap key here—never an unrestricted CARTO API token or another secret.
 
 ### Build and Static Export
 Compile the production build:
