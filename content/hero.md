@@ -14,9 +14,9 @@ orcid: "https://orcid.org/0000-0003-1343-7183"
 
 
 interests:
-  - "📊 Data Science"
-  - "🏙️ Smart Cities & IoT"
-  - "💻 Software Engineering"
+  - "* Data Science"
+  - "* Smart Cities & IoT"
+  - "* Software Engineering"
 
 education:
   - area: "MSc Computer Science"

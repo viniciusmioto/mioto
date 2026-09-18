@@ -78,8 +78,8 @@ export function Hero({ author, children }: HeroProps) {
             <h3>Education</h3>
             {author.education.map((edu) => (
               <div key={edu.area} className="education-entry">
-                <p className="education-degree">🎓 {edu.area}</p>
-                <p className="education-institution">{edu.institution}</p>
+                <p className="education-degree">{edu.area}</p>
+                <p className="education-institution">@ {edu.institution}</p>
                 <p className="education-dates">
                   {edu.date_start.slice(0, 4)} — {edu.date_end.slice(0, 4)}
                 </p>
