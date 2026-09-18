@@ -20,7 +20,7 @@ export default function BlogPage() {
           ))}
         </div>
       )}
-      <div className="section-actions" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+      <div className="section-actions page-actions--centered">
         <a className="button button-secondary" href="https://blog.ptidej.net/author/vinicius/" target="_blank" rel="noopener noreferrer">
           View all blogs
         </a>

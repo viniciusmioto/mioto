@@ -22,7 +22,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="page-shell">
-      <SectionHeading title={project.title} description={project.summary} />
+      <SectionHeading title={project.title} description={project.summary} variant="title" />
       
       <div className="project-detail">
         {project.image ? (
@@ -37,7 +37,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
 
           {(project.website || project.github) && (
-          <div className="project-links" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+            <div className="project-links">
               {project.website && (
                 <a className="meta-link" href={project.website} target="_blank" rel="noreferrer">
                   Website
@@ -51,7 +51,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </div>
           )}
 
-          <div className="project-body" style={{ marginTop: '2rem' }}>
+          <div className="project-body">
             <Post />
           </div>
         </div>

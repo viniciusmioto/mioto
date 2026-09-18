@@ -21,7 +21,7 @@ export default async function CVPage() {
             <div key={item.area} className="timeline-item">
               <strong>{item.area}</strong>
               <span>{item.institution}</span>
-              <span>{item.date_start} — {item.date_end}</span>
+              <span className="timeline-dates">{item.date_start} — {item.date_end}</span>
             </div>
           ))}
         </div>
@@ -34,7 +34,7 @@ export default async function CVPage() {
             <div key={`${item.position}-${item.company_name}`} className="timeline-item">
               <strong>{item.position}</strong>
               <span><a href={item.company_url} target="_blank" rel="noreferrer">{item.company_name}</a></span>
-              <span>{item.date_start} — {item.date_end ?? 'Present'}</span>
+              <span className="timeline-dates">{item.date_start} — {item.date_end ?? 'Present'}</span>
             </div>
           ))}
         </div>

@@ -33,7 +33,7 @@ export default async function HomePage() {
               <PublicationListItem key={publication.slug} publication={publication} />
             ))}
           </div>
-          <div className="section-actions" style={{ marginTop: '1.5rem' }}>
+          <div className="section-actions">
             <Link className="button button-secondary" href="/publications">
               View all publications
             </Link>
@@ -47,7 +47,7 @@ export default async function HomePage() {
               <BlogCard key={post.slug} post={post} />
             ))}
           </div>
-          <div className="section-actions" style={{ marginTop: '1.5rem' }}>
+          <div className="section-actions">
             <Link className="button button-secondary" href="https://blog.ptidej.net/author/vinicius/" target="_blank" rel="noopener noreferrer">
               View all blogs
             </Link>
@@ -56,20 +56,20 @@ export default async function HomePage() {
 
         <section>
           <SectionHeading title="News" />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+          <div className="news-list">
             {topNews.map((newsItem, index) => (
               <NewsListItem key={index} newsItem={newsItem} />
             ))}
           </div>
-          <div className="section-actions" style={{ marginTop: '1.5rem' }}>
+          <div className="section-actions">
             <Link className="button button-secondary" href="/news">
               View all news
             </Link>
           </div>
         </section>
 
-        <section style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', marginBottom: '1.5rem' }}>
-          <Link className="button button-primary" href="/about" style={{ padding: '0.8rem 2.2rem', fontSize: '1.1rem', fontWeight: '600' }}>
+        <section className="page-actions page-actions--centered">
+          <Link className="button button-primary" href="/about">
             More about me
           </Link>
         </section>

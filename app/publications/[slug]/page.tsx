@@ -21,7 +21,7 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
 
   return (
     <div className="page-shell">
-      <SectionHeading title={publication.title} description={publication.summary} />
+      <SectionHeading title={publication.title} description={publication.summary} variant="title" />
       <div className="publication-detail">
         <p className="meta-line">
           <strong>Publication</strong> {publication.venue}
@@ -29,8 +29,8 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
         <p className="meta-line">
           <strong>Authors</strong> {publication.authors.join(', ')}
         </p>
-        <p className="meta-line">
-          <strong>Date</strong> {publication.date}
+        <p className="meta-line meta-line--mono">
+          <strong>Date</strong> {publication.date.slice(0, 10)}
         </p>
         <div className="tag-list">
           {publication.tags.map((tag) => (
@@ -51,13 +51,13 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
         </div>
 
         {publication.abstract && (
-          <div className="publication-abstract" style={{ marginTop: '2rem' }}>
+          <div className="publication-abstract">
             <h3>Abstract</h3>
             <p>{publication.abstract}</p>
           </div>
         )}
 
-          <div className="publication-body" style={{ marginTop: '2rem' }}>
+          <div className="publication-body">
             <Post />
           </div>
       </div>

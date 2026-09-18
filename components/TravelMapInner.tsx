@@ -250,7 +250,7 @@ export function TravelMapInner({ cities }: TravelMapInnerProps) {
   return (
     <div className="travel-map-wrapper">
       {/* Main Map Container */}
-      <div className="map-container-inner" style={{ height: '520px', borderRadius: '1.25rem', overflow: 'hidden' }}>
+      <div className="map-container-inner">
         <div ref={containerRef} className="leaflet-map-instance" />
       </div>
     </div>

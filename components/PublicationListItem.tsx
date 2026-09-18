@@ -15,7 +15,7 @@ export function PublicationListItem({ publication }: PublicationListItemProps) {
       <p className="pub-authors">{publication.authors.join(', ')}</p>
       
       <p className="pub-venue">
-        {new Date(publication.date).getFullYear()} — {publication.venue}
+        <span className="pub-year">{new Date(publication.date).getFullYear()}</span> — {publication.venue}
       </p>
 
       {(publication.pdf || publication.doi) && (

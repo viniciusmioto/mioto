@@ -23,14 +23,14 @@ export function Card({ title, description, href, tags = [], website, github, ima
           </h3>
           <p className="project-card-description">{description}</p>
           
-          <div className="tag-list" style={{ marginTop: '0.75rem', marginBottom: '0.75rem' }}>
+          <div className="tag-list">
             {tags.map((tag) => (
               <span key={tag} className="tag">{tag}</span>
             ))}
           </div>
 
           {(website || github) && (
-            <div className="pub-meta-links" style={{ marginTop: '0.5rem' }}>
+            <div className="pub-meta-links">
               {website && (
                 <a href={website} target="_blank" rel="noreferrer" className="pub-meta-link">
                   Website

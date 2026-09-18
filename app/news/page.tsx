@@ -15,14 +15,14 @@ export default async function NewsPage() {
           <p>No news items are available yet.</p>
         </div>
       ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+        <div className="news-list">
           {news.map((newsItem, index) => (
             <NewsListItem key={index} newsItem={newsItem} />
           ))}
         </div>
       )}
       
-      <div className="page-actions" style={{ marginTop: '2rem' }}>
+      <div className="page-actions">
         <Link className="button" href="/">Back to home</Link>
       </div>
     </div>

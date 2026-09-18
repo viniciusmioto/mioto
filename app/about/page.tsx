@@ -37,28 +37,26 @@ export default function AboutPage() {
   return (
     <div className="page-shell">
       {/* Short Bio Section */}
-      <section style={{ marginBottom: '3rem' }}>
+      <section>
         <div className="bio-article-content">
           <BioContent />
         </div>
       </section>
 
       {/* Travel Map Section */}
-      <section style={{ marginBottom: '2.5rem' }}>
-        <SectionHeading
-          title="🗺️ Travel Map"
-        />
+      <section>
+        <SectionHeading title="Travel map" />
         <TravelMap cities={cities} />
       </section>
 
       {/* Visited Destinations breakdown */}
-      <section style={{ marginBottom: '2rem' }}>
-        <div className="travel-table-wrapper" style={{ overflowX: 'auto', marginTop: '1.5rem' }}>
-          <table className="travel-table" style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+      <section>
+        <div className="travel-table-wrapper">
+          <table className="travel-table">
             <thead>
-              <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-primary)' }}>
-                <th style={{ padding: '0.75rem 1rem', fontWeight: '600' }}>Country</th>
-                <th style={{ padding: '0.75rem 1rem', fontWeight: '600', textAlign: 'right' }}>Cities Visited</th>
+              <tr>
+                <th>Country</th>
+                <th className="is-numeric">Cities Visited</th>
               </tr>
             </thead>
             <tbody>
@@ -67,23 +65,23 @@ export default function AboutPage() {
                 const flag = countryCities[0]?.flag || '🏳️';
 
                 return (
-                  <tr key={country} style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                    <td style={{ padding: '0.85rem 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <span style={{ fontSize: '1.2rem' }}>{flag}</span>
-                      <span>{country}</span>
+                  <tr key={country}>
+                    <td>
+                      <span className="country-cell">
+                        <span className="country-flag" aria-hidden="true">{flag}</span>
+                        <span>{country}</span>
+                      </span>
                     </td>
-                    <td style={{ padding: '0.85rem 1rem', textAlign: 'right', fontWeight: '500', color: 'var(--accent-blue)' }}>
-                      {citiesByCountry[country].length}
-                    </td>
+                    <td className="is-numeric">{countryCities.length}</td>
                   </tr>
                 );
               })}
               {/* Total Row */}
-              <tr style={{ borderTop: '2px solid var(--border-color)', fontWeight: '700', color: 'var(--text-primary)', background: 'rgba(255, 255, 255, 0.02)' }}>
-                <td style={{ padding: '1rem' }}>
+              <tr className="total-row">
+                <td>
                   Total: {totalCountries} {totalCountries === 1 ? 'country' : 'countries'}
                 </td>
-                <td style={{ padding: '1rem', textAlign: 'right', color: 'var(--accent-blue)' }}>
+                <td className="is-numeric">
                   {totalCities} {totalCities === 1 ? 'city' : 'cities'}
                 </td>
               </tr>

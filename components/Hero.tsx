@@ -1,10 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAt,
-  faGraduationCap,
-  faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import {
   faGithub,
   faLinkedin,
   faGoogleScholar,
