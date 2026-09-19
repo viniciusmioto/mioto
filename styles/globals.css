@@ -141,7 +141,7 @@ h6 {
    ========================================================================== */
 
 .site-header {
-  background: var(--bg-secondary);
+  background: #000;
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
@@ -448,6 +448,7 @@ h6 {
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1;
+  text-transform: lowercase;
   min-height: 2.25rem;
   padding: 0.5rem 0.85rem;
   border: 1px solid var(--border-color);
@@ -490,7 +491,6 @@ h6 {
   min-height: 2rem;
   padding: 0.3rem 0.6rem;
   font-size: 0.75rem;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--accent-blue);
 }
@@ -608,6 +608,151 @@ h6 {
   gap: 1.5rem;
 }
 
+/* Portfolio follows the same long-form hierarchy used on the About page. */
+.portfolio-intro {
+  margin-bottom: 2.5rem;
+}
+
+.portfolio-intro p {
+  max-width: 72ch;
+}
+
+.portfolio-group + .portfolio-group {
+  margin-top: 3.5rem;
+}
+
+.portfolio-group .section-heading h2 {
+  font-size: 1.35rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.portfolio-group .section-heading h2::before {
+  content: './';
+  margin-right: 0.5rem;
+  color: var(--text-label);
+}
+
+.portfolio-project-list {
+  display: grid;
+}
+
+.portfolio-project {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  scroll-margin-top: 5rem;
+}
+
+.portfolio-project:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.portfolio-project-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.portfolio-project-gallery {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.portfolio-project-gallery--multiple {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portfolio-project-figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.portfolio-project-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.portfolio-project-gallery--multiple .portfolio-project-image-frame {
+  aspect-ratio: 1 / 1;
+  background: #fff;
+}
+
+.portfolio-project-image {
+  object-fit: cover;
+}
+
+.portfolio-project-image--contain {
+  object-fit: contain;
+  padding: 0.65rem;
+}
+
+.portfolio-project-figure figcaption {
+  margin-top: 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.portfolio-project-context {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin: 0 0 0.55rem;
+  color: var(--text-label);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-project-context time {
+  color: var(--text-date);
+  letter-spacing: 0;
+}
+
+.portfolio-project-copy h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.portfolio-project-summary {
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.portfolio-project-body {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.portfolio-project-body p {
+  margin: 0 0 0.85rem;
+}
+
+.portfolio-project-body ul {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.portfolio-project-body li + li {
+  margin-top: 0.35rem;
+}
+
+.portfolio-project-copy .tag-list {
+  margin-top: 1rem;
+}
+
 /* ==========================================================================
    Publications
    ========================================================================== */
@@ -630,6 +775,15 @@ h6 {
 .pub-title:focus-visible {
   color: var(--accent-blue);
   text-decoration: underline;
+}
+
+.title-link-icon {
+  width: 0.78em;
+  height: 0.78em;
+  margin-right: 0.45rem;
+  color: var(--accent-blue);
+  opacity: 0.8;
+  vertical-align: -0.03em;
 }
 
 .pub-authors {
@@ -1287,6 +1441,11 @@ h6 {
   color: var(--text-primary);
 }
 
+.bio-article-content h1::before {
+  content: '> ';
+  color: var(--text-prompt);
+}
+
 .bio-article-content h2 {
   font-size: 1.35rem;
   font-weight: 600;
@@ -1294,6 +1453,24 @@ h6 {
   color: var(--text-primary);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
+}
+
+.bio-article-content h2::before {
+  content: './';
+  margin-right: 0.5rem;
+  color: var(--text-label);
+}
+
+.about-travel-section .section-heading h2 {
+  font-size: 1.35rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.about-travel-section .section-heading h2::before {
+  content: './';
+  margin-right: 0.5rem;
+  color: var(--text-label);
 }
 
 .bio-article-content h3 {
@@ -1373,6 +1550,11 @@ h6 {
 
   .hero-copy {
     max-width: none;
+  }
+
+  .portfolio-project-layout {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
   }
 }
 
@@ -1491,6 +1673,18 @@ h6 {
     display: block;
     min-width: 0;
     margin-bottom: 0.15rem;
+  }
+
+  .portfolio-project {
+    padding: 1.5rem 0;
+  }
+
+  .portfolio-project-gallery--multiple {
+    gap: 0.5rem;
+  }
+
+  .portfolio-project-context {
+    display: grid;
   }
 
   .travel-table th,

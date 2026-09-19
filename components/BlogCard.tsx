@@ -1,4 +1,6 @@
 import { Blog } from '../lib/data';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 interface BlogCardProps {
   post: Blog;
@@ -10,7 +12,10 @@ export function BlogCard({ post }: BlogCardProps) {
       <a href={post.link} target="_blank" rel="noopener noreferrer" className="blog-card-link">
         <div className="blog-card-content">
           <div className="blog-card-left">
-            <h3 className="blog-card-title">{post.title}</h3>
+            <h3 className="blog-card-title">
+              <FontAwesomeIcon icon={faLink} className="title-link-icon" aria-hidden="true" />
+              {post.title}
+            </h3>
             {post.summary && <p className="blog-card-summary">{post.summary}</p>}
             {post.date && <p className="blog-card-date">{post.date}</p>}
           </div>

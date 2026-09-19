@@ -1,6 +1,6 @@
 # Vinicius Mioto — Academic & Professional Portfolio
 
-A premium, modern, and highly responsive personal academic and professional website built with **Next.js 15**, **TypeScript**, and **Vanilla CSS**. Designed for researchers, software developers, and data scientists to showcase bio profiles, research publications, portfolio projects, professional history, and blog posts.
+A personal academic and professional website built with **Next.js**, **TypeScript**, and **CSS**. It brings together research publications, a single-page portfolio, a CV, and blog posts.
 
 ---
 
@@ -65,19 +65,18 @@ npm run lint
 ├── app/                  # Next.js App Router pages and layouts
 │   ├── blog/             # Blog page route (/blog)
 │   ├── cv/               # CV detail page route (/cv)
-│   ├── projects/         # Portfolio page listing and dynamic slug details (/projects)
+│   ├── projects/         # Single-page portfolio (/projects)
 │   ├── publications/     # Publications page listing and dynamic slug details (/publications)
 │   ├── layout.tsx        # Global site layout, including Header & Footer shell
-│   └── page.tsx          # Homepage (landing layout featuring top publications/projects)
+│   └── page.tsx          # Homepage
 ├── components/           # Reusable React components
-│   ├── Card.tsx          # Two-column layout card for projects and portfolios
+│   ├── PortfolioProject.tsx # Portfolio entry with images, copy, tags, and source links
 │   ├── Header.tsx        # Top navigation bar
 │   ├── Footer.tsx        # Footer signature and social links
 │   ├── Hero.tsx          # Main profile introduction section
 │   ├── PublicationListItem.tsx  # Dynamic list items for academic publications
 │   └── SectionHeading.tsx # Component for section titles and descriptions
 ├── content/              # Markdown (md) source files for site content
-│   ├── projects/         # Individual project folders (each with index.md and media)
 │   ├── publications/     # Individual publication folders (each with index.md and cite.bib)
 │   └── hero.md           # Professional summary, social links, and bio description
 ├── lib/                  # Business logic and content loading engines
@@ -168,26 +167,8 @@ To add a new publication:
 
 ---
 
-### 3. Adding Portfolio Projects
-Projects are loaded dynamically from folders inside `content/projects/`.
-
-To add a new project:
-1. Create a folder under `content/projects/<slug>/` (e.g., `content/projects/network_science/`).
-2. Add an `index.md` file:
-   ```yaml
-   ---
-   title: "Social Network Analysis"
-   date: "2024-12-01"
-   website: "https://my-project-website.com"
-   github: "https://github.com/viniciusmioto/social_networks_analysis"
-   summary: "Brief project summary that displays in the project card."
-   tags:
-     - "Data Science"
-     - "Network Science"
-   ---
-   Detailed project documentation in markdown. The title will link to the detail route (`/projects/<slug>`) where this markdown body is converted to HTML and fully rendered.
-   ```
-3. Optional: Include a cover image named `featured.png` (or `feature.png`, `featured.jpg`, `feature.jpg`) inside your project directory. The loader will automatically detect and sync this image to the public assets directory (`/public/projects/<slug>/`) at build time.
+### 3. Updating the Portfolio
+All projects are presented directly in `app/projects/page.tsx`, with no project subpages. Each `PortfolioProject` entry contains its summary, longer description, images, topics, and links to its original work. Images live under `public/projects/` and `public/design/`. Add new files there and update the relevant `images` array; the `src` value is a path beginning with `/`.
 
 ---
 

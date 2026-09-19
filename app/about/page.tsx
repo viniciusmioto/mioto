@@ -44,7 +44,7 @@ export default function AboutPage() {
       </section>
 
       {/* Travel Map Section */}
-      <section>
+      <section className="about-travel-section">
         <SectionHeading title="Travel map" />
         <TravelMap cities={cities} />
       </section>

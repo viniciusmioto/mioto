@@ -28,17 +28,6 @@ export interface Publication {
   pdf?: string;
 }
 
-export interface Project {
-  slug: string;
-  title: string;
-  date: string;
-  website?: string;
-  github?: string;
-  summary: string;
-  tags: string[];
-  image?: string;
-}
-
 export interface Blog {
   slug: string;
   title: string;
@@ -60,4 +49,3 @@ export interface VisitedCity {
   latitude: number;
   longitude: number;
 }
-

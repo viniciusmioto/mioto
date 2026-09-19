@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import HeroContent from '../content/hero.md';
-import { getHeroData, getAllPublications, getAllProjects, getAllBlogs, getAllNews } from '../lib/content';
+import { getHeroData, getAllPublications, getAllBlogs, getAllNews } from '../lib/content';
 import { Hero } from '../components/Hero';
 import { SectionHeading } from '../components/SectionHeading';
-import { Card } from '../components/Card';
 import { PublicationListItem } from '../components/PublicationListItem';
 import { BlogCard } from '../components/BlogCard';
 import { NewsListItem } from '../components/NewsListItem';
@@ -12,8 +11,6 @@ export default async function HomePage() {
   const author = await getHeroData();
   const allPublications = await getAllPublications();
   const topPublications = allPublications.slice(0, 5);
-  const allProjects = await getAllProjects();
-  const topProjects = allProjects.slice(0, 3);
   const allBlogs = getAllBlogs();
   const topBlogs = allBlogs.slice(0, 3);
   const allNews = await getAllNews();
@@ -77,4 +74,3 @@ export default async function HomePage() {
     </>
   );
 }
-

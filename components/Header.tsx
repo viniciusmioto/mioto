@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 
 const navItems = [
+  { href: '/projects', label: 'Portfolio' },
   { href: '/publications', label: 'Publications' },
-  { href: 'https://github.com/viniciusmioto', label: 'Portfolio', external: true },
   { href: '/cv', label: 'CV' },
   { href: '/blog', label: 'Blog' },
   { href: '/news', label: 'News' },
@@ -55,7 +55,6 @@ export function Header() {
               key={item.href} 
               href={item.href} 
               onClick={() => setMenuOpen(false)}
-              {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
               {item.label}
             </Link>
