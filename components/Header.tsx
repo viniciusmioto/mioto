@@ -8,7 +8,7 @@ import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 const navItems = [
   { href: '/projects', label: 'Portfolio' },
   { href: '/publications', label: 'Publications' },
-  { href: '/cv', label: 'CV' },
+  { href: '/cv.pdf', label: 'CV' },
   { href: '/blog', label: 'Blog' },
   { href: '/news', label: 'News' },
 ];
@@ -54,6 +54,7 @@ export function Header() {
             <Link 
               key={item.href} 
               href={item.href} 
+              {...(item.label === 'CV' ? { target: '_blank', rel: 'noreferrer' } : {})}
               onClick={() => setMenuOpen(false)}
             >
               {item.label}
