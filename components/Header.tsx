@@ -8,7 +8,7 @@ import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 const navItems = [
   { href: '/projects', label: 'Portfolio' },
   { href: '/publications', label: 'Publications' },
-  { href: '/cv.pdf', label: 'CV' },
+  { href: '/cv_vinicius_mioto.pdf', label: 'CV' },
   { href: '/blog', label: 'Blog' },
   { href: '/news', label: 'News' },
 ];
